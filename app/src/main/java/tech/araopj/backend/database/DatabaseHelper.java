@@ -60,4 +60,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return columnNames;
     }
 
+    public Context getContext() {
+        return context;
+    }
+
+    public String getTABLE_NAME() {
+        return TABLE_NAME;
+    }
 }
