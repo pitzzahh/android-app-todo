@@ -12,9 +12,13 @@
         android:theme="@style/Theme.ToDoApp"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".AddActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
