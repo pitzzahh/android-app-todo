@@ -3,11 +3,8 @@ package tech.araopj.backend.todo.service;
 import android.widget.Toast;
 import android.database.Cursor;
 import android.content.ContentValues;
-
 import tech.araopj.backend.model.Todo;
-
 import android.database.sqlite.SQLiteDatabase;
-
 import tech.araopj.backend.database.DatabaseHelper;
 
 public class ToDoService {
@@ -77,6 +74,17 @@ public class ToDoService {
                         databaseHelper.getContext(),
                         update != -1 ? String.format("%s ToDo Updated Successfully", todo.getTodo()) :
                                 String.format("Failed to Update %s ToDo", todo.getTodo()), Toast.LENGTH_LONG
+                )
+                .show();
+    }
+
+    public void removeTodo(Todo todo) {
+        SQLiteDatabase writableDatabase = databaseHelper.getWritableDatabase();
+        int delete = writableDatabase.delete(databaseHelper.getTABLE_NAME(), "id = ?", new String[]{String.valueOf(todo.getId())});
+        Toast.makeText(
+                        databaseHelper.getContext(),
+                        delete != -1 ? String.format("%s ToDo Deleted Successfully", todo.getTodo()) :
+                                String.format("Failed to Delete %s ToDo", todo.getTodo()), Toast.LENGTH_LONG
                 )
                 .show();
     }
