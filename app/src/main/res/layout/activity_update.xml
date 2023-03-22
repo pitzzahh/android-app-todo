@@ -61,17 +61,4 @@
         app:layout_constraintTop_toBottomOf="@+id/deadline"
         tools:ignore="VisualLintButtonSize" />
 
-    <Button
-        android:id="@+id/removeToDo"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:focusable="true"
-        android:text="@string/remove_todo"
-        app:backgroundTint="#CF1C1C"
-        app:layout_constraintEnd_toEndOf="@+id/updateButton"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/updateButton"
-        app:layout_constraintTop_toBottomOf="@+id/updateButton"
-        tools:ignore="VisualLintButtonSize" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
