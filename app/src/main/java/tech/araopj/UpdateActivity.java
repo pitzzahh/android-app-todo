@@ -1,7 +1,6 @@
 package tech.araopj;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import tech.araopj.backend.model.Todo;
@@ -33,7 +32,5 @@ public class UpdateActivity extends AppCompatActivity {
             if (isValid) toDoService.updateTodo(new Todo(todo.getText().toString().trim(), deadline.getText().toString().trim()));
         });
 
-        Button removeButton = findViewById(R.id.removeToDo);
-        removeButton.setOnClickListener(view -> Log.d("remove_todo", "Remove todo"));
     }
 }
