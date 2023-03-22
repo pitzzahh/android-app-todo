@@ -10,4 +10,5 @@
     <string name="idText">1</string>
     <string name="deadlineText">January 1, 2023</string>
     <string name="todoText">Fix Bug on Prod</string>
+    <string name="emptyString" />
 </resources>
