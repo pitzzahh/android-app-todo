@@ -3,14 +3,14 @@ package tech.araopj;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import tech.araopj.backend.database.DatabaseHelper;
-
+/**
+ * Simple ToDo App
+ * @author Peter John Arao
+ */
 public class MainActivity extends AppCompatActivity {
 
 
