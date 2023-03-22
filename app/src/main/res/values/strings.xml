@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">BookApp</string>
     <string name="add_todo">Add ToDo</string>
+    <string name="update_todo">Update ToDo</string>
+    <string name="remove_todo">Remove ToDo</string>
     <string name="enter_todo">Enter ToDo</string>
     <string name="enter_deadline_of_todo">Enter Deadline of ToDO</string>
     <string name="add_todo_header">Add ToDO</string>
+    <string name="update_todo_header">Update ToDO</string>
 </resources>
