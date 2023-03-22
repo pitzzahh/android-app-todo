@@ -7,4 +7,7 @@
     <string name="enter_deadline_of_todo">Enter Deadline of ToDO</string>
     <string name="add_todo_header">Add ToDO</string>
     <string name="update_todo_header">Update ToDO</string>
+    <string name="idText">1</string>
+    <string name="deadlineText">January 1, 2023</string>
+    <string name="todoText">Fix Bug on Prod</string>
 </resources>
