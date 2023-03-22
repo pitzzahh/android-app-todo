@@ -4,6 +4,7 @@ import android.util.Log;
 import android.content.Context;
 import java.lang.reflect.Field;
 import androidx.annotation.Nullable;
+import android.database.SQLException;
 import tech.araopj.backend.model.Todo;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -37,7 +38,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String QUERY = stringBuilder.toString();
         Log.d("create_table", QUERY);
-        db.execSQL(QUERY);
+        try {
+            db.execSQL(QUERY);
+        } catch (SQLException e) {
+            Log.e("creating_table", e.toString());
+        }
     }
 
     @Override
