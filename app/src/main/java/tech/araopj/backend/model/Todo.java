@@ -1,18 +1,20 @@
 package tech.araopj.backend.model;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Todo {
 
     private int id;
-    private String todo;
-    private LocalDateTime deadline;
 
-    public Todo() {
+    private String todo;
+    private String deadline;
+
+    public Todo(String todo, String deadline) {
+        this.todo = todo;
+        this.deadline = deadline;
     }
 
-    public Todo(int id, String todo, LocalDateTime deadline) {
+    public Todo(int id, String todo, String deadline) {
         this.id = id;
         this.todo = todo;
         this.deadline = deadline;
@@ -20,10 +22,6 @@ public class Todo {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTodo() {
@@ -34,11 +32,11 @@ public class Todo {
         this.todo = todo;
     }
 
-    public LocalDateTime getDeadline() {
+    public String getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(LocalDateTime deadline) {
+    public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
 
