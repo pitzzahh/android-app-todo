@@ -24,8 +24,7 @@ public class AddActivity extends AppCompatActivity {
 
         todo = findViewById(R.id.todo);
         deadline = findViewById(R.id.deadline);
-        addButton = findViewById(R.id.addButton);
-
+        addButton = findViewById(R.id.addTodo);
 
     }
 
