@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="deadlineText">January 1, 2023</string>
+    <string name="todoText">Fix Bug on Prod</string>
+</resources>
