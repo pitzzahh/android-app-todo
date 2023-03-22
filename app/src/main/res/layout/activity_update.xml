@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_todo_header"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/todo"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="250dp"
+        android:ems="10"
+        android:hint="@string/enter_todo"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/deadline"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_deadline_of_todo"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/todo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/todo"
+        app:layout_constraintTop_toBottomOf="@+id/todo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:text="@string/update_todo"
+        app:layout_constraintEnd_toEndOf="@+id/deadline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/deadline"
+        app:layout_constraintTop_toBottomOf="@+id/deadline"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/removeToDo"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:focusable="true"
+        android:text="@string/remove_todo"
+        app:backgroundTint="#CF1C1C"
+        app:layout_constraintEnd_toEndOf="@+id/updateButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/updateButton"
+        app:layout_constraintTop_toBottomOf="@+id/updateButton"
+        tools:ignore="VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
