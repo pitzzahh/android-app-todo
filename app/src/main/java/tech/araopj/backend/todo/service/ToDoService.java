@@ -3,8 +3,11 @@ package tech.araopj.backend.todo.service;
 import android.widget.Toast;
 import android.database.Cursor;
 import android.content.ContentValues;
+
 import tech.araopj.backend.model.Todo;
+
 import android.database.sqlite.SQLiteDatabase;
+
 import tech.araopj.backend.database.DatabaseHelper;
 
 public class ToDoService {
@@ -22,7 +25,11 @@ public class ToDoService {
         contentValues.put(databaseHelper.getClassFields(todo.getClass())[1].getName(), todo.getTodo());
         contentValues.put(databaseHelper.getClassFields(todo.getClass())[0].getName(), todo.getDeadline());
         long insert = writableDatabase.insert(databaseHelper.getTABLE_NAME(), null, contentValues);
-        Toast.makeText(databaseHelper.getContext(), insert != -1 ? String.format("%s ToDo Added Successfully", todo.getTodo()) : String.format("Failed to Add %s ToDo", todo.getTodo()), Toast.LENGTH_SHORT)
+        Toast.makeText(
+                        databaseHelper.getContext(),
+                        insert != -1 ? String.format("%s ToDo Added Successfully", todo.getTodo()) :
+                                String.format("Failed to Add %s ToDo", todo.getTodo()), Toast.LENGTH_LONG
+                )
                 .show();
     }
 
@@ -64,9 +71,13 @@ public class ToDoService {
                 databaseHelper.getTABLE_NAME(),
                 contentValues,
                 "id = ?",
-                new String[] {String.valueOf(oldTodo.getId())}
+                new String[]{String.valueOf(oldTodo.getId())}
         );
-        Toast.makeText(databaseHelper.getContext(), update != -1 ? String.format("%s ToDo Updated Successfully", todo.getTodo()) : String.format("Failed to Update %s ToDo", todo.getTodo()), Toast.LENGTH_SHORT)
+        Toast.makeText(
+                        databaseHelper.getContext(),
+                        update != -1 ? String.format("%s ToDo Updated Successfully", todo.getTodo()) :
+                                String.format("Failed to Update %s ToDo", todo.getTodo()), Toast.LENGTH_LONG
+                )
                 .show();
     }
 }
