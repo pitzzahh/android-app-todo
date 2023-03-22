@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/todo"
-        android:layout_width="316dp"
+        android:layout_width="320dp"
         android:layout_height="55dp"
         android:layout_marginTop="250dp"
         android:ems="10"
@@ -22,7 +22,7 @@
 
     <EditText
         android:id="@+id/deadline"
-        android:layout_width="316dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
         android:autofillHints=""
         android:ems="10"
@@ -38,7 +38,7 @@
 
     <Button
         android:id="@+id/addTodo"
-        android:layout_width="316dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
         android:focusable="true"
@@ -47,4 +47,16 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/deadline"
         app:layout_constraintTop_toBottomOf="@+id/deadline" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_todo_header"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
