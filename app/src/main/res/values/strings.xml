@@ -3,4 +3,5 @@
     <string name="add_todo">Add ToDo</string>
     <string name="enter_todo">Enter ToDo</string>
     <string name="enter_deadline_of_todo">Enter Deadline of ToDO</string>
+    <string name="add_todo_header">Add ToDO</string>
 </resources>
